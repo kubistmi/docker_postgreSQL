@@ -8,7 +8,7 @@ ARG D_PASSWD
 ARG D_DATABASE
 
 # Add PostgreSQL's repository. It contains the most recent stable release of PostgreSQL
-RUN apt-get update && apt-get install -y apt-utils wget gnupg && wget -O ACCC4CF8.asc http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc && apt-key add ACCC4CF8.asc
+RUN apt-get update && apt-get install -y apt-utils wget gnupg && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 7FCC7D46ACCC4CF8
 
 # Get the signing key and import it
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" > /etc/apt/sources.list.d/pgdg.list
