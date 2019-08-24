@@ -1,0 +1,17 @@
+# Dockerfiles pipeline
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: mv postgres/config{_example,}.sh 
+  displayName: 'Rename config'
+
+- script: cd postgres && ./build.sh
+  displayName: 'Building the image'
+
+- script: cd postgres && ./run.sh
+  displayName: 'Run the image' 
