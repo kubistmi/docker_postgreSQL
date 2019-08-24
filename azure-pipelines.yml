@@ -9,7 +9,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: mv postgres/config{_examples,}.sh 
+- script: mv postgres/config_examples postgres/config.sh 
   displayName: 'Rename config'
 
 - script: postgres/build.sh
