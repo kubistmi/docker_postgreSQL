@@ -1,4 +1,7 @@
 # Dockerfiles pipeline
+variables:
+  dockerId: kubistmi
+  imageName: postgresql
 
 trigger:
 - master
@@ -15,3 +18,9 @@ steps:
 
 - script: cd postgres && ./run.sh
   displayName: 'Run the image' 
+
+- script: |
+    docker login -u $(dockerId) -p $(pswd)
+    docker tag postgresql $(dockerId)/$(imageName)
+    docker push $(dockerId)/$(imageName)
+  displayName: 'Publishing to DockerHub' 

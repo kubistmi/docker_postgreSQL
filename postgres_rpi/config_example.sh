@@ -1,12 +1,12 @@
 #!/bin/bash
 # Dockerfile
-D_USER='dbuser'
-D_PASSWD='dbpasswd'
-D_DATABASE='dbname'
+D_USER='admin'
+D_PASSWD='password'
+D_DATABASE='dev'
 # Build
-D_IMAGE='image_name'
+D_IMAGE='postgresql'
 # Run
 D_LOCAL=''
 D_REMOTE=''
 D_PORT='5432'
-D_CONTAINER='container_name'
+D_CONTAINER='my_amazing_db'
