@@ -1,6 +1,5 @@
 # Dockerfiles
-[![Build Status](https://dev.azure.com/MichalKubista/Dockerfiles/_apis/build/status/kubistmi.dockerfiles?branchName=master)](https://dev.azure.com/MichalKubista/Dockerfiles/_build/latest?definitionId=2&branchName=master)
-
+[![Build Status](https://dev.azure.com/MichalKubista/PostgreSQL%20Dockerfiles/_apis/build/status/kubistmi.docker_postgreSQL?branchName=master)](https://dev.azure.com/MichalKubista/PostgreSQL%20Dockerfiles/_build/latest?definitionId=4&branchName=master)
 A set of dockerfiles that I frequently use.  
 Serves mostly as learning project.
 
