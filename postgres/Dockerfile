@@ -7,6 +7,10 @@ ARG D_USER
 ARG D_PASSWD
 ARG D_DATABASE
 
+# Don't prompt the user for choices on installation/configuration of packages
+ENV DEBIAN_FRONTEND noninteractive
+ENV TERM linux
+
 # Add PostgreSQL's repository. It contains the most recent stable release of PostgreSQL
 RUN apt-get update && apt-get install -y apt-utils wget gnupg \
     && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 7FCC7D46ACCC4CF8
@@ -24,7 +28,7 @@ RUN apt-get update && apt-get install -y \
 USER postgres
 
 # DATABASE SETUP
-RUN    /etc/init.d/postgresql start \
+RUN /etc/init.d/postgresql start \
     && psql --command "CREATE USER $D_USER WITH SUPERUSER PASSWORD '$D_PASSWD';" \
     && createdb -O $D_USER $D_DATABASE
 
