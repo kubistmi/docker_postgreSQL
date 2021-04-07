@@ -1,5 +1,6 @@
 # Dockerfiles
-[![Build Status](https://dev.azure.com/MichalKubista/PostgreSQL%20Dockerfiles/_apis/build/status/kubistmi.docker_postgreSQL?branchName=master)](https://dev.azure.com/MichalKubista/PostgreSQL%20Dockerfiles/_build/latest?definitionId=4&branchName=master)  
+[![Build Status](https://dev.azure.com/MichalKubista/PostgreSQL%20Dockerfiles/_apis/build/status/kubistmi.docker_postgreSQL?branchName=master)](https://dev.azure.com/MichalKubista/PostgreSQL%20Dockerfiles/_build/latest?definitionId=4&branchName=master)
+
 A set of dockerfiles that I frequently use.  
 Serves mostly as learning project.
 
@@ -31,10 +32,10 @@ docker run --restart always --name kubistmi/IMAGE_NAME -d -p 5433:5432
 #!/bin/bash
 
 # download
-git clone git@github.com:kubistmi/dockerfiles.git
+git clone git@github.com:kubistmi/docker_postgreSQL.git
 
 # navigate and edit the config
-cd dockerfiles/postgres
+cd docker_postgreSQL/postgres
 mv config{_example,}.sh
 vi config.sh
 
